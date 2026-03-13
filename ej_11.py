@@ -17,7 +17,7 @@ sales =  {
 
 while True:
     print("\n---New Customer---")
-    product = input("Enter the product (cone/cup/banana split): ")
+    product = input("Enter the product (cone/cup/banana split) or type'exit' to end the program: ")
     
     if product == "exit":
         break
@@ -34,12 +34,19 @@ while True:
          
     except ValueError:
         print("Invalid input, Try again. ")
+        continue
+    
+    
+    total_customer = 0
+    total_customer += prices[product] * quantity
 
     total_customer += prices[product] *quantity
     print (f"Total Customer: {total_customer}")
     
     total_sold += total_customer
     sales[product] += quantity
+    cust_handled += 1
+    
 print("\n ---Sumary---")
 print(f"Total sold: {total_sold}")
 print(f"Customer handled: {cust_handled}")
