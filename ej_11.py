@@ -40,7 +40,6 @@ while True:
     total_customer = 0
     total_customer += prices[product] * quantity
 
-    total_customer += prices[product] *quantity
     print (f"Total Customer: {total_customer}")
     
     total_sold += total_customer
@@ -49,7 +48,7 @@ while True:
     
 print("\n ---Sumary---")
 print(f"Total sold: {total_sold}")
-print(f"Customer handled: {cust_handled}")
+print(f"Customers handled: {cust_handled}")
 
 most_sold_product = max(sales, key= sales.get)
 print(f"Most requested product: {most_sold_product} ({sales[most_sold_product]}) units")
