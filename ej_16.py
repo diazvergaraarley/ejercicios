@@ -6,11 +6,11 @@ toys = 0
 accessories = 0
 
 
-for i in range(3):
+for i in range(10):
     
-    category = input("Select the product category (a. accessory b. edible, c. toy ): ")
+    category = input("Select the product category (a. accessory b. food, c. toy ): ")
     
-    quantity= int(input("Enter the total purchase ammount: "))
+    quantity= int(input("Enter the total purchase amount: "))
     
     if category== "a":
         accessories+= quantity 
@@ -20,7 +20,7 @@ for i in range(3):
         toys +=  quantity 
           
 max_cat = edibles
-soldest = "Edibles"
+soldest = "Food"
 
 if toys > max_cat:
     max_cat = toys
@@ -33,7 +33,7 @@ if accessories > max_cat:
 print(f"""
       Total per category:
        
-      Edibles: {edibles}
+      Food: {edibles}
       Toys: {toys}
       Accessories: {accessories}
       
