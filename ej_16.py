@@ -1,17 +1,42 @@
-edibles = {
 
-    "dogs food": 2500,
-    "cats food": 3200,
-    "fish food": 6000
-}
-toys = {
-    "bone": 2800,
-    "feathers": 3500,
-    "bubles": 4500
-}
-accesories = {
-    "neckless": 1500,
-    "bed": 6200,
-    "shark": 4200
-}
-categories =[edibles , toys, accesories]
+max_cat= 0
+soldest= ""    
+edibles = 0
+toys = 0
+accessories = 0
+
+
+for i in range(3):
+    
+    category = input("Select the product category (a. accessory b. edible, c. toy ): ")
+    
+    quantity= int(input("Enter the total purchase ammount: "))
+    
+    if category== "a":
+        accessories+= quantity 
+    elif category== "b":
+        edibles +=  quantity 
+    elif category== "c":
+        toys +=  quantity 
+          
+max_cat = edibles
+soldest = "Edibles"
+
+if toys > max_cat:
+    max_cat = toys
+    soldest = "Toys"
+
+if accessories > max_cat:
+    max_cat = accessories
+    soldest = "Accessories"
+        
+print(f"""
+      Total per category:
+       
+      Edibles: {edibles}
+      Toys: {toys}
+      Accessories: {accessories}
+      
+      Category with the most sales: {soldest}
+      """
+      )
